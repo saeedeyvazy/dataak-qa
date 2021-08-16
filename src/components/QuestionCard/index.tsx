@@ -16,7 +16,7 @@ export const QuestionCard: React.FC<Props> = ({
 				userImage={userImage}
 				title={title}
 			/>
-			<div className='flex flex-col px-4 text-sm text-right h-14 bg-qa-card text-qa-black'>
+			<div className='flex flex-col p-4 text-sm text-right h-14 bg-qa-card text-qa-black'>
 				<p>{questionText}</p>
 			</div>
 		</div>
