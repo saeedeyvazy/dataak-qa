@@ -34,7 +34,7 @@
 				},
 				{
 					"like": "۵",
-					"dislike": 3,
+					"dislike": "۹",
 					"topic": "پاسخ شماره ۱",
 					"text": "",
 					"time": "۱۶:۴۸",
@@ -50,16 +50,16 @@
 			"date": "۱۴۰۰/۰۲/۱۹",
 			"answerList": [
 				{
-					"like": 2,
-					"dislike": 1,
+					"like": "۵",
+					"dislike": "۹",
 					"topic": "پاسخ شماره ۱",
 					"text": "",
 					"time": "۱۶:۴۸",
 					"date": "۱۴۰۰/۰۲/۱۹"
 				},
 				{
-					"like": 2,
-					"dislike": 1,
+					"like": "۲",
+					"dislike": "۰",
 					"topic": "پاسخ شماره ۳",
 					"text": "",
 					"time": "۱۶:۴۸",

@@ -5,6 +5,7 @@ export const AnswerHeader: React.FC<Props> = ({
 	time,
 	date,
 	likes,
+	dislikes,
 	title,
 	userImage,
 }) => {
@@ -30,6 +31,7 @@ export const AnswerHeader: React.FC<Props> = ({
 					</div>
 					<div className='flex items-center gap-2'>
 						<img src={DISLIKE} alt='' />
+						<span>{dislikes}</span>
 					</div>
 				</div>
 			</div>
@@ -41,6 +43,7 @@ interface Props {
 	time: string
 	date: string
 	likes: number
+	dislikes: number
 	title: string
 	userImage: string
 }

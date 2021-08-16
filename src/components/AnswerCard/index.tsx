@@ -12,6 +12,7 @@ export const AnswerCard: React.FC<Props> = ({
 	title,
 	id,
 	likes,
+	dislike,
 }) => {
 	const dispatch = useDispatch()
 	const history = useHistory()
@@ -25,6 +26,7 @@ export const AnswerCard: React.FC<Props> = ({
 				time={time}
 				date={date}
 				likes={likes}
+				dislikes={dislike}
 				userImage={userImage}
 				title={title}
 			/>
@@ -46,4 +48,5 @@ interface Props {
 	title: string
 	id: number
 	likes: number
+	dislike: number
 }
