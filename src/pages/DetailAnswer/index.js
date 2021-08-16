@@ -1,8 +1,11 @@
 import React from 'react'
-import { Header, QuestionList } from '@components'
-import { PROFILE_IMAGE } from '@image-components'
+import { Header, QuestionCard } from '@components'
+import { PROFILE_IMAGE, ASKER_PROFILE } from '@image-components'
+import { selectedQuestion } from '@features/counter/counterSlice'
+import { useSelector } from 'react-redux'
 
 function DetailAnswer() {
+	const selectQuestion = useSelector(selectedQuestion)
 	return (
 		<>
 			<div className='space-y-6'>
@@ -12,7 +15,14 @@ function DetailAnswer() {
 					userImage={PROFILE_IMAGE}
 				/>
 				<div className='container'>
-					<QuestionList />
+					<QuestionCard
+						questionText={selectQuestion.text}
+						time={selectQuestion.time}
+						date={selectQuestion.date}
+						userImage={ASKER_PROFILE}
+						title={selectQuestion.topic}
+						id={selectQuestion.id}
+					/>
 				</div>
 			</div>
 		</>

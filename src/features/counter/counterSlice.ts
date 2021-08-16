@@ -73,5 +73,8 @@ export const { increment, selectQuestion, incrementByAmount } =
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectQuestionList = (state: RootState) =>
 	state.counter.questionList
+
+export const selectedQuestion = (state: RootState) => state.counter.selectedQ
+
 export const questionMaxId = (state: RootState) => state.counter.maxId
 export default counterSlice.reducer
