@@ -9,7 +9,7 @@
 			"answerList": [
 				{
 					"id": 1,
-					"like": "۲",
+					"like": 1,
 					"dislike": "۰",
 					"topic": "پاسخ شماره ۱",
 					"text": "",
@@ -27,7 +27,7 @@
 			"answerList": [
 				{
 					"id": 1,
-					"like": "۲",
+					"like": 1,
 					"dislike": "۰",
 					"topic": "پاسخ شماره ۲",
 					"text": "متغیر  env رو درست ست نکردید",
@@ -36,7 +36,7 @@
 				},
 				{
 					"id": 2,
-					"like": "۵",
+					"like": 1,
 					"dislike": "۹",
 					"topic": "پاسخ شماره ۱",
 					"text": "",
@@ -54,7 +54,7 @@
 			"answerList": [
 				{
 					"id": 1,
-					"like": "۵",
+					"like": 1,
 					"dislike": "۹",
 					"topic": "پاسخ شماره ۱",
 					"text": "",
@@ -63,7 +63,7 @@
 				},
 				{
 					"id": 2,
-					"like": "۲",
+					"like": 1,
 					"dislike": "۰",
 					"topic": "پاسخ شماره ۳",
 					"text": "",
@@ -81,7 +81,7 @@
 			"answerList": [
 				{
 					"id": 1,
-					"like": "۲",
+					"like": 1,
 					"dislike": "۰",
 					"topic": "پاسخ شماره ۱",
 					"text": "",
@@ -99,7 +99,7 @@
 			"answerList": [
 				{
 					"id": 1,
-					"like": "۲",
+					"like": 1,
 					"dislike": "۰",
 					"topic": "پاسخ شماره ۱",
 					"text": "",

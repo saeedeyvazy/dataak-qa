@@ -1,9 +1,6 @@
+import { PrimaryButton, SecondaryButton } from '@components'
+import { questionMaxId } from '@features/counter/counterSlice'
 import React from 'react'
-import { SecondaryButton, PrimaryButton } from '@components'
-import {
-	incrementByAmount,
-	questionMaxId,
-} from '@features/counter/counterSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 function ModalContent({ closeModal }) {
@@ -20,7 +17,7 @@ function ModalContent({ closeModal }) {
 		}))
 	}
 	function addQuestion() {
-		dispatch(incrementByAmount(question))
+		dispatch(addQuestion(question))
 		closeModal()
 	}
 	return (

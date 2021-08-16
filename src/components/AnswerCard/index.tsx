@@ -1,10 +1,7 @@
 import { AnswerHeader } from './AnswerHeader'
 import { LikeButton } from '../LikeButton'
 import { DisLikeButton } from '../DisLikeButton'
-import { selectQuestion } from '../../features/counter/counterSlice'
-import { useDispatch } from 'react-redux'
-import { useHistory } from 'react-router'
-
+import { useState } from 'react'
 export const AnswerCard: React.FC<Props> = ({
 	questionText,
 	time,
@@ -15,18 +12,16 @@ export const AnswerCard: React.FC<Props> = ({
 	likes,
 	dislike,
 }) => {
-	const dispatch = useDispatch()
-	const history = useHistory()
-	function navigateToDetail() {
-		dispatch(selectQuestion(id))
-		history.push('/detail-answer')
+	const [newLike, setnewLike] = useState(likes)
+	function likeAnswer() {
+		setnewLike((newLike) => newLike + 1)
 	}
 	return (
 		<div className='px-4 bg-white rounded-md shadow-md '>
 			<AnswerHeader
 				time={time}
 				date={date}
-				likes={likes}
+				likes={newLike}
 				dislikes={dislike}
 				userImage={userImage}
 				title={title}
@@ -34,7 +29,7 @@ export const AnswerCard: React.FC<Props> = ({
 			<div className='flex flex-col p-4 text-sm text-right bg-qa-card text-qa-black'>
 				<p>{questionText}</p>
 				<div className='flex justify-end gap-2'>
-					<LikeButton />
+					<LikeButton onClick={likeAnswer} />
 					<DisLikeButton />
 				</div>
 			</div>
