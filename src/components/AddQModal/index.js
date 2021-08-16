@@ -14,6 +14,9 @@ export function AddQModal({ showModal, closeModal }) {
 			center
 			classNames={{ modal: 'customModal', overlay: 'customOverlay' }}
 		>
+			<p className='absolute text-base font-extrabold text-qa-black top-3 right-4'>
+				ایجاد سوال جدید
+			</p>
 			<ModalContent />
 		</Modal>
 	)

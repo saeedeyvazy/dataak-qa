@@ -1,5 +1,5 @@
 .customModal {
-	background-color: #f9f9f9;
+	background-color: #ffffff;
 	border-radius: 10px;
 	width: 700px;
 	height: 440px;
@@ -7,4 +7,13 @@
 }
 .customOverlay {
 	background: rgba(0, 0, 0, 0.38);
+}
+.react-responsive-modal-closeButton {
+	left: 14px;
+	right: auto;
+}
+.react-responsive-modal-modal {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
 }
