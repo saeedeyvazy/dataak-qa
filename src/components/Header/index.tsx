@@ -1,22 +1,23 @@
 import React from 'react'
 import { PrimaryButton } from '../PrimaryButton'
-import PROFILE_IMAGE from '@images/ellipse.png'
 import BOTTOM_ARROW from '@images/polygon.png'
 
-export const Header: React.FC<Props> = ({ title }) => {
+export const Header: React.FC<Props> = ({ title, userImage, username }) => {
 	return (
-		<div className='container flex items-center  justify-between h-16'>
+		<div className='container flex items-center justify-between h-16'>
 			<div className='flex items-center gap-4'>
 				<img src={BOTTOM_ARROW} alt='arrow' />
-				<h3 className='text-qa-dark-black font-bold text-sm'>مرضیه ابراهیمی</h3>
-				<img src={PROFILE_IMAGE} alt='profile' />
+				<h3 className='text-sm font-bold text-qa-dark-black'>{username}</h3>
+				<img src={userImage} alt='profile' />
 				<PrimaryButton text='سوال جدید' />
 			</div>
-			<h3 className='text-qa-black text-2xl font-extrabold'>لیست سوالات</h3>
+			<h3 className='text-2xl font-extrabold text-qa-black'>{title}</h3>
 		</div>
 	)
 }
 
 interface Props {
 	title: string
+	username: string
+	userImage: string
 }
