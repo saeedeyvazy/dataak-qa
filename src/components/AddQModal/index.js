@@ -17,7 +17,7 @@ export function AddQModal({ showModal, closeModal }) {
 			<p className='absolute text-base font-extrabold text-qa-black top-3 right-4'>
 				ایجاد سوال جدید
 			</p>
-			<ModalContent />
+			<ModalContent closeModal={closeModal} />
 		</Modal>
 	)
 }
