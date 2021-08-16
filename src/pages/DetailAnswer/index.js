@@ -3,6 +3,7 @@ import { Header, QuestionCard } from '@components'
 import { PROFILE_IMAGE, ASKER_PROFILE } from '@image-components'
 import { selectedQuestion } from '@features/counter/counterSlice'
 import { useSelector } from 'react-redux'
+import { AnswerList } from '../../components'
 
 function DetailAnswer() {
 	const selectQuestion = useSelector(selectedQuestion)
@@ -14,7 +15,7 @@ function DetailAnswer() {
 					username='مرضیه ابراهیمی'
 					userImage={PROFILE_IMAGE}
 				/>
-				<div className='container'>
+				<div className='container space-y-8'>
 					<QuestionCard
 						questionText={selectQuestion.text}
 						time={selectQuestion.time}
@@ -23,6 +24,8 @@ function DetailAnswer() {
 						title={selectQuestion.topic}
 						id={selectQuestion.id}
 					/>
+					<span className='text-2xl font-extrabold'>پاسخ ها</span>
+					<AnswerList answerList={selectQuestion.answerList} />
 				</div>
 			</div>
 		</>

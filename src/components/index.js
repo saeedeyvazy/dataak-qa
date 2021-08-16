@@ -4,7 +4,8 @@ import { QuestionCard } from './QuestionCard'
 import { SecondaryButton } from './SecondaryButton'
 import { QuestionList } from './QuestionList'
 import { AddQModal } from './AddQModal'
-
+import { AnswerList } from './AnswerList'
+import { AnswerCard } from './AnswerCard'
 export {
 	Header,
 	PrimaryButton,
@@ -12,4 +13,6 @@ export {
 	SecondaryButton,
 	QuestionList,
 	AddQModal,
+	AnswerCard,
+	AnswerList,
 }
