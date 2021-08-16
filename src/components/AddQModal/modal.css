@@ -1,0 +1,10 @@
+.customModal {
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	width: 700px;
+	height: 440px;
+	direction: rtl;
+}
+.customOverlay {
+	background: rgba(0, 0, 0, 0.38);
+}
