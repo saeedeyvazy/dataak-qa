@@ -1,6 +1,6 @@
 import React from 'react'
-import { Header, QuestionCard } from '@components'
-import { PROFILE_IMAGE, ASKER_PROFILE } from '@image-components'
+import { Header, QuestionList } from '@components'
+import { PROFILE_IMAGE } from '@image-components'
 
 function Home() {
 	return (
@@ -11,13 +11,7 @@ function Home() {
 				userImage={PROFILE_IMAGE}
 			/>
 			<div className='container'>
-				<QuestionCard
-					title='مشکل احراز هویت در ری اکت'
-					time='۱۶:۴۸'
-					date='۱۴۰۰/۰۲/۱۹'
-					questionText='سلام'
-					userImage={ASKER_PROFILE}
-				/>
+				<QuestionList />
 			</div>
 		</div>
 	)
