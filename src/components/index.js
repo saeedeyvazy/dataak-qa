@@ -6,6 +6,8 @@ import { QuestionList } from './QuestionList'
 import { AddQModal } from './AddQModal'
 import { AnswerList } from './AnswerList'
 import { AnswerCard } from './AnswerCard'
+import { LikeButton } from './LikeButton'
+import { DisLikeButton } from './DisLikeButton'
 export {
 	Header,
 	PrimaryButton,
@@ -15,4 +17,6 @@ export {
 	AddQModal,
 	AnswerCard,
 	AnswerList,
+	LikeButton,
+	DisLikeButton,
 }

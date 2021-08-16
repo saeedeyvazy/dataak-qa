@@ -11,6 +11,8 @@ module.exports = {
 				'qa-dark-black': ' #454545',
 				'qa-gray': '#777777',
 				'qa-card': '#F9F9F9',
+				like: '#66CB9F',
+				dislike: '#F16063',
 				primary: '#199DA3',
 			},
 		},

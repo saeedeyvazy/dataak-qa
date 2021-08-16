@@ -1,5 +1,6 @@
 import { AnswerHeader } from './AnswerHeader'
-import { SecondaryButton } from '../SecondaryButton'
+import { LikeButton } from '../LikeButton'
+import { DisLikeButton } from '../DisLikeButton'
 import { selectQuestion } from '../../features/counter/counterSlice'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
@@ -32,8 +33,9 @@ export const AnswerCard: React.FC<Props> = ({
 			/>
 			<div className='flex flex-col p-4 text-sm text-right bg-qa-card text-qa-black'>
 				<p>{questionText}</p>
-				<div className='flex justify-end'>
-					<SecondaryButton onClick={navigateToDetail} text='مشاهده جزییات' />
+				<div className='flex justify-end gap-2'>
+					<LikeButton />
+					<DisLikeButton />
 				</div>
 			</div>
 		</div>
