@@ -19,7 +19,7 @@ export const QuestionCard: React.FC<Props> = ({
 			/>
 			<div className='flex flex-col p-4 text-sm text-right bg-qa-card text-qa-black'>
 				<p>{questionText}</p>
-				<div className='flex'>
+				<div className='flex justify-end'>
 					<SecondaryButton text='مشاهده جزییات' />
 				</div>
 			</div>
