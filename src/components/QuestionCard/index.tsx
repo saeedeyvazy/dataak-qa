@@ -1,4 +1,5 @@
 import { QuestionHeader } from './QuestionHeader'
+import { SecondaryButton } from '../SecondaryButton'
 
 export const QuestionCard: React.FC<Props> = ({
 	questionText,
@@ -16,8 +17,11 @@ export const QuestionCard: React.FC<Props> = ({
 				userImage={userImage}
 				title={title}
 			/>
-			<div className='flex flex-col p-4 text-sm text-right h-14 bg-qa-card text-qa-black'>
+			<div className='flex flex-col p-4 text-sm text-right bg-qa-card text-qa-black'>
 				<p>{questionText}</p>
+				<div className='flex'>
+					<SecondaryButton text='مشاهده جزییات' />
+				</div>
 			</div>
 		</div>
 	)
