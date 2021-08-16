@@ -8,11 +8,12 @@ export const QuestionList = () => {
 	return (
 		<div className='space-y-4'>
 			{questionList.map((question) => {
-				const { topic, date, time, text } = question
+				const { topic, date, time, text, id } = question
 				return (
 					<QuestionCard
 						title={topic}
 						time={time}
+						id={id}
 						date={date}
 						questionText={text}
 						userImage={ASKER_PROFILE}
