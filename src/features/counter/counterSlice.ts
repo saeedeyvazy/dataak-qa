@@ -4,6 +4,7 @@ import { fetchCount } from './counterAPI'
 
 export interface CounterState {
 	value: number
+	maxId: number
 	status: 'idle' | 'loading' | 'failed'
 	questionList: Array<Object>
 }
@@ -12,6 +13,7 @@ const initialState: CounterState = {
 	value: 0,
 	status: 'idle',
 	questionList: [],
+	maxId: 1,
 }
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -40,8 +42,9 @@ export const counterSlice = createSlice({
 			state.value -= 1
 		},
 		// Use the PayloadAction type to declare the contents of `action.payload`
-		incrementByAmount: (state, action: PayloadAction<number>) => {
-			state.value += action.payload
+		incrementByAmount: (state, action: PayloadAction<Object>) => {
+			state.questionList.push({ ...action.payload })
+			state.maxId += 1
 		},
 	},
 	// The `extraReducers` field lets the slice handle actions defined elsewhere,
@@ -54,6 +57,7 @@ export const counterSlice = createSlice({
 			.addCase(incrementAsync.fulfilled, (state, action) => {
 				state.status = 'idle'
 				state.questionList = action.payload
+				state.maxId = action.payload.length
 			})
 	},
 })
@@ -65,5 +69,5 @@ export const { increment, decrement, incrementByAmount } = counterSlice.actions
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectQuestionList = (state: RootState) =>
 	state.counter.questionList
-
+export const questionMaxId = (state: RootState) => state.counter.maxId
 export default counterSlice.reducer

@@ -1,19 +1,36 @@
 import React from 'react'
 import { SecondaryButton, PrimaryButton } from '@components'
+import {
+	incrementByAmount,
+	questionMaxId,
+} from '@features/counter/counterSlice'
+import { useDispatch, useSelector } from 'react-redux'
 
 function ModalContent({ closeModal }) {
-	const [question, setQuestion] = React.useState({ title: '', text: '' })
+	const [question, setQuestion] = React.useState({ topic: '', text: '' })
+	const dispatch = useDispatch()
+	const maxId = useSelector(questionMaxId)
 	function handleChange({ target: { name, value } }) {
-		setQuestion((question) => ({ ...question, [name]: value }))
+		setQuestion((question) => ({
+			...question,
+			time: '۲۲:۲۱',
+			date: '۱۴۰۰/۰۵/۲۵',
+			id: maxId + 1,
+			[name]: value,
+		}))
+	}
+	function addQuestion() {
+		dispatch(incrementByAmount(question))
+		closeModal()
 	}
 	return (
 		<div className='p-5 bg-gray-100 mt-14'>
 			<div className='container flex flex-col items-start w-full gap-2 '>
 				<p className='text-xs font-bold text-qa-dark-black'>موضوع</p>
 				<input
-					value={question.title}
+					value={question.topic}
 					onChange={handleChange}
-					name='title'
+					name='topic'
 					type='text'
 					className='w-full px-4 py-2 text-sm border border-gray-300 rounded-md outline-none text-qa-black h-11'
 				/>
@@ -26,7 +43,7 @@ function ModalContent({ closeModal }) {
 				/>
 				<div className='flex items-center justify-end w-full gap-6 mt-4'>
 					<SecondaryButton text='انصراف' onClick={closeModal} />
-					<PrimaryButton text='ایجاد سوال' />
+					<PrimaryButton text='ایجاد سوال' onClick={addQuestion} />
 				</div>
 			</div>
 		</div>
