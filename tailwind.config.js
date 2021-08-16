@@ -9,6 +9,8 @@ module.exports = {
 			colors: {
 				'qa-black': '#222222',
 				'qa-dark-black': ' #454545',
+				'qa-gray': '#777777',
+				'qa-card': '#F9F9F9',
 				primary: '#199DA3',
 			},
 		},
