@@ -1,6 +1,9 @@
-// A mock function to mimic making an async request for data
-export function fetchCount(amount = 1) {
-  return new Promise<{ data: number }>((resolve) =>
-    setTimeout(() => resolve({ data: amount }), 500)
-  );
+import axios from 'axios'
+
+export async function fetchCount(amount = 1) {
+	const response = await axios.get(
+		'https://my-json-server.typicode.com/saeedeyvazy/dataak-qa/questionList'
+	)
+
+	return response
 }

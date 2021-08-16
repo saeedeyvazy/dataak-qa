@@ -1,9 +1,9 @@
 import { ASKER_PROFILE } from '@image-components'
-import { useAxios } from '@hooks/useAxios'
+import { useQuestionList } from '@hooks/useQuestionList'
 import { QuestionCard } from '@components'
 
 export const QuestionList = () => {
-	const questionList = useAxios({ url: '' })
+	const questionList = useQuestionList()
 
 	return (
 		<div className='space-y-4'>
