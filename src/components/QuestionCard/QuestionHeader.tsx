@@ -5,6 +5,7 @@ export const QuestionHeader: React.FC<Props> = ({
 	date,
 	answerNum,
 	title,
+	userImage,
 }) => {
 	return (
 		<div className='flex items-center justify-between h-12 px-2 py-1 shadow-md'>
@@ -22,6 +23,10 @@ export const QuestionHeader: React.FC<Props> = ({
 					<span className='font-bold '>{time}</span>
 				</div>
 			</div>
+			<div className='flex items-center gap-3'>
+				<h3 className='text-base font-bold text-qa-black'>{title}</h3>
+				<img className='object-cover' src={userImage} alt='asker-profile' />
+			</div>
 		</div>
 	)
 }
@@ -31,4 +36,5 @@ interface Props {
 	date: string
 	answerNum: number
 	title: string
+	userImage: string
 }
