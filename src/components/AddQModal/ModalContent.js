@@ -14,7 +14,7 @@ function ModalContent() {
 				<textarea className='w-full h-40 px-4 py-2 text-sm border border-gray-300 outline-none text-qa-black' />
 				<div className='flex items-center justify-end w-full gap-6 mt-4'>
 					<SecondaryButton text='انصراف' />
-					<PrimaryButton text='اایجاد سوال' />
+					<PrimaryButton text='ایجاد سوال' />
 				</div>
 			</div>
 		</div>

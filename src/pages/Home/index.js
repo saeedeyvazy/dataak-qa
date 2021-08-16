@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, QuestionList, AddQModal } from '@components'
+import { Header, QuestionList } from '@components'
 import { PROFILE_IMAGE } from '@image-components'
 
 function Home() {
@@ -15,7 +15,6 @@ function Home() {
 					<QuestionList />
 				</div>
 			</div>
-			<AddQModal showModal />
 		</>
 	)
 }
