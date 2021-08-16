@@ -11,6 +11,7 @@ export const AnswerCard: React.FC<Props> = ({
 	userImage,
 	title,
 	id,
+	likes,
 }) => {
 	const dispatch = useDispatch()
 	const history = useHistory()
@@ -23,7 +24,7 @@ export const AnswerCard: React.FC<Props> = ({
 			<AnswerHeader
 				time={time}
 				date={date}
-				answerNum={18}
+				likes={likes}
 				userImage={userImage}
 				title={title}
 			/>
@@ -44,4 +45,5 @@ interface Props {
 	userImage: string
 	title: string
 	id: number
+	likes: number
 }
